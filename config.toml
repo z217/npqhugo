@@ -1,0 +1,57 @@
+baseURL = "https://z217.github.com"
+copyright = "Copyright © 2020–2020, z217 and the Hugo Authors; all rights reserved."
+languageCode = "zh-CN"
+pygmentsUseClasses = true
+theme = "npq-hugo"
+title = "z217's blog"
+
+[params]
+author = "z217"
+description = "A personal blog of z217"
+displayHomeContent = true
+displayMicroBlog = true
+displayRecent = true
+formspreeID = ""
+keywords = "hugo blog"
+mail = "mailto:zihan.zhouchn@outlook.com"
+microBlogSection = "posts"
+phone = ""
+recentMax = 4
+useAvatar = true
+
+[menu]
+[[menu.main]]
+name = "首页"
+pre = "<i class=\"fas fa-home fa-ms\"></i>"
+url = "/"
+weight = -9
+[[menu.main]]
+name = "文章"
+pre = "<i class=\"fas fa-keyboard fa-ms\"></i>"
+url = "/post/"
+weight = -8
+[[menu.main]]
+name = "标签"
+pre = "<i class=\"fas fa-tags fa-ms\"></i>"
+url = "/tags"
+weight = -7
+[[menu.main]]
+name = "关于"
+pre = "<i class=\"fas fa-smile fa-ms\"></i>"
+url = "/about"
+weight = -6
+[[menu.main]]
+name = "Github"
+pre = "<i class=\"fab fa-github fa-ms\"></i>"
+url = "https://github.com/z217"
+weight = -5
+[[menu.main]]
+name = "RSS"
+pre = "<i class=\"fas fa-rss fa-ms\"></i>"
+url = "/index.xml"
+weight = -3
+#[[menu.main]]
+#name = "contact"
+#pre = "<i class=\"far fa-envelope\"></i>"
+#url = "/contact"
+#weight = -1

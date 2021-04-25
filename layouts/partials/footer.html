@@ -1,20 +1,28 @@
 <footer>
-<div class="footer-content">
-{{if (or (isset .Site.Params "mail") (isset .Site.Params "phone") ) }}
-  <div class="contact-info">
-      {{with .Site.Params.mail}}
-          <div class="footer-mail">
-          <i class="far fa-envelope"></i> <a href="mailto:{{.}}">{{.}}</a> </div>
-      {{end}}
-      {{with .Site.Params.phone}}
-      <div class="footer-phone">
-          <i class="fas fa-phone"></i> {{.}} 
-      </div>
-      {{end}}
-  </div>
-{{end}}
-{{with .Site.Copyright}}
-<p class="copyright meta">{{.}}</p>
-{{end}}
-</div>
+    <div class="footer-content">
+        {{if (or (isset .Site.Params "mail") (isset .Site.Params "phone") ) }}
+        <div class="contact-info">
+            {{with .Site.Params.github}}
+            <div class="footer-github">
+                <i class="fab fa-github fa-ms"></i> <a target="_blank" href="https://{{.}}">{{.}}</a>
+            </div>
+            {{end}}
+            {{with .Site.Params.mail}}
+            <div class="footer-mail">
+                <i class="far fa-envelope"></i> <a href="mailto:{{.}}">{{.}}</a> </div>
+            {{end}}
+            {{with .Site.Params.phone}}
+            <div class="footer-phone">
+                <i class="fas fa-phone"></i> {{.}}
+            </div>
+            {{end}}
+        </div>
+        {{end}}
+        {{with .Site.Copyright}}
+        <p class="copyright meta">{{.}} Theme: <a target="_blank"
+                href="https://github.com/ahmedsaadxyzz/npq-hugo">npq-hugo</a></p>
+        {{end}}
+    </div>
 </footer>
+
+{{ partial "mathjax.html" . }}

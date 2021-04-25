@@ -6,7 +6,7 @@
     background-color: #1C1E1F;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: #2A2C2E;
 }
 
@@ -14,14 +14,15 @@
     background-color: rgb(24, 24, 24);
 }
 
-html, body {
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+html,
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-size: 17px;
     line-height: 1.6;
     height: 100%;
     margin: 0px;
-    background-color:#1A1C1D;
-    color : #D8D6D0;
+    background-color: #1A1C1D;
+    color: #D8D6D0;
 }
 
 a {
@@ -34,7 +35,7 @@ a:hover {
 }
 
 aside {
-    background-color:rgb(45, 49, 51);
+    background-color: rgb(45, 49, 51);
     height: 100%;
     width: 200px;
     z-index: 1;
@@ -46,19 +47,20 @@ aside {
     flex-direction: column;
     align-items: center;
     border-right: 1px solid #3D3D3D;
-    transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+    transition: 0.3s;
+    /* 0.5 second transition effect to slide in the sidenav */
 }
 
 aside a {
-    color:rgb(238, 238, 238);
+    color: rgb(238, 238, 238);
 }
 
-aside i[class^="fa"]{
+aside i[class^="fa"] {
     padding: 0em 0.4em 0em 0em;
 }
 
 aside header {
-    background-color:#23282E;
+    background-color: #23282E;
     text-align: center;
     display: flex;
     align-items: center;
@@ -67,7 +69,7 @@ aside header {
     border-bottom: 1px solid #3D3D3D;
 }
 
-aside header img{
+aside header img {
     margin-top: 20px;
     min-width: 150px;
     max-width: 150px;
@@ -101,7 +103,7 @@ aside nav a {
 }
 
 aside nav a:hover {
-    background-color:rgb(48, 75, 102);
+    background-color: rgb(48, 75, 102);
 }
 
 #branding {
@@ -111,8 +113,8 @@ aside nav a:hover {
     color: rgb(188, 188, 196);
 }
 
-#npq{
-    color: rgb(119, 125, 143); 
+#npq {
+    color: rgb(119, 125, 143);
 }
 
 #closebtn {
@@ -122,17 +124,78 @@ aside nav a:hover {
     left: 200px;
     top: 0px;
     padding: 10px;
-    color:rgba(238, 238, 238, 0.664);   
+    color: rgba(238, 238, 238, 0.664);
     background-color: rgba(61, 61, 61, 0.555);
+}
+
+#sidetoc {
+    transition: all 0.4s;
+    position: fixed;
+    right: 8px;
+    max-width: 300px;
+    overflow: auto;
+    top: 130px;
+    width: 210px;
+    bottom: 150px;
+    overflow: scroll;
+}
+
+#sidetoc header {
+    font-size: 18px;
+    text-align: center;
+}
+
+#sidetoc header h4 {
+    padding: 5px;
+    margin: 5px;
+}
+
+#sidetoc ul {
+    list-style: none;
+    white-space: nowrap;
+    padding: 0px 15px;
+}
+
+#sidetoc nav>ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#sidetoc li a {
+    color: rgba(238, 238, 238, 0.664);
+}
+
+#sidetoc li a:hover {
+    text-decoration: none;
+    transition: 0.6s;
+    border-left: 4px solid rgb(48, 75, 102);
+    padding: 0px 5px;
+}
+
+#tocbtn {
+    transition: 0.4s;
+    transition-delay: 0.3s;
+    border-radius: 7px;
+    position: fixed;
+    right: 100px;
+    top: 100px;
+    padding: 0px 8px 0px 8px;
+    color: rgba(238, 238, 238, 0.664);
+    background-color: rgba(61, 61, 61, 0.555);
+}
+
+.toc-highlight {
+    color: white;
 }
 
 .list-item {
     border: 1px solid #3D3D3D;
     border-radius: 3px;
     padding: 10px;
-    background-color:rgb(39, 41, 43);
+    background-color: rgb(39, 41, 43);
 }
-.list-item+.list-item{
+
+.list-item+.list-item {
     margin-top: 10px;
 }
 
@@ -146,8 +209,8 @@ aside nav a:hover {
 }
 
 .meta {
-   color: rgb(156, 151, 143);
-   font-size: small;
+    color: rgb(156, 151, 143);
+    font-size: small;
 }
 
 main {
@@ -156,19 +219,19 @@ main {
     margin-left: 200px;
     padding: 0px;
     height: 100%;
-    transition: 0.3s; 
+    transition: 0.3s;
 }
 
-#random-meme{
+#random-meme {
     font-size: 20px;
 }
- 
-button{
+
+button {
     padding: 15px 32px;
     border: none;
     margin: 5px;
     font-size: 16px;
-    color: white;  
+    color: white;
 }
 
 .button-red {
@@ -180,20 +243,23 @@ button{
 }
 
 .content {
-    width : 90%;
-    margin:0px auto auto auto;
+    width: 90%;
+    margin: 0px auto auto auto;
     word-break: break-word;
 }
 
 table {
     border-collapse: collapse;
 }
-  
-table, th, td {
+
+table,
+th,
+td {
     border: 1px solid rgb(97, 96, 96);
 }
 
-th, td {
+th,
+td {
     padding: 5px 10px;
 }
 
@@ -205,7 +271,9 @@ tr:nth-child(even) {
     background-color: rgb(70, 69, 69);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     border-bottom: 1px solid #3D3D3D;
 }
 
@@ -214,7 +282,8 @@ h1, h2, h3 {
     margin: 20px;
     padding-bottom: 5px;
 }
-.spacer{
+
+.spacer {
     height: 50px;
 }
 
@@ -252,22 +321,22 @@ blockquote {
 }
 
 
-.post p{
-    margin:4px 0px;
+.post p {
+    margin: 4px 0px;
 }
 
-.post-footer{
+.post-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.section{
-    display:flex;
+.section {
+    display: flex;
     flex-direction: column;
 }
 
-.section-title{
+.section-title {
     margin: 20px;
     font-size: 25px;
     text-align: center;
@@ -284,6 +353,10 @@ blockquote {
     border-top: 1px solid #3D3D3D;
 }
 
+.nav-top {
+    font-size: 25px;
+}
+
 ul.pagination {
     display: flex;
     flex-direction: row;
@@ -296,22 +369,22 @@ ul.pagination {
     border-top: 1px solid #3D3D3D;
 }
 
-.nav-top:hover{
-   text-decoration: none;
+.nav-top:hover {
+    text-decoration: none;
 }
 
 .grayed-out {
-    color: rgb(70, 69, 69) ;
+    color: rgb(70, 69, 69);
 }
 
-footer{
+footer {
     padding: 30px;
     margin-top: 40px;
     border-top: 1px solid #3D3D3D;
-    background-color:rgb(30, 34, 39) ;
+    background-color: rgb(30, 34, 39);
 }
 
-.footer-content{
+.footer-content {
     width: 70%;
     margin: auto;
     display: flex;
@@ -320,7 +393,7 @@ footer{
     align-items: center;
 }
 
-.copyright{
+.copyright {
     text-align: center;
 }
 
@@ -340,9 +413,11 @@ footer{
     padding: 10px;
 }
 
-.contact-form input, .contact-form button, .contact-form textarea {
-    color : #D8D6D0;
-    background-color:#181A1B ;
+.contact-form input,
+.contact-form button,
+.contact-form textarea {
+    color: #D8D6D0;
+    background-color: #181A1B;
     border-radius: 3px;
     border: 1px solid #3D3D3D;
     padding: 10px;
@@ -356,7 +431,7 @@ footer{
     width: 50%;
 }
 
-.contact-form button{
+.contact-form button {
     padding: 15px 32px;
     height: auto;
     width: auto;
@@ -371,22 +446,25 @@ footer{
 
 } */
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
     #sidenav {
         width: 0px;
     }
+
     #main {
         margin-left: 0px;
     }
+
     #closebtn {
-        left:0px;
-    }
-    .content {
-        width : 95%;
-        margin:0px auto auto auto;
+        left: 0px;
     }
 
-    .footer-content{
+    .content {
+        width: 95%;
+        margin: 0px auto auto auto;
+    }
+
+    .footer-content {
         flex-direction: column;
     }
 
@@ -396,13 +474,13 @@ footer{
 }
 
 @media only screen and (max-width: 1000px) {
-    .footer-content{
+    .footer-content {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 420px) {
-    .contact-info{
+    .contact-info {
         flex-direction: column;
         align-items: center;
     }
@@ -410,8 +488,8 @@ footer{
 
 @media only screen and (min-width: 1200px) {
     .content {
-        width : 70%;
-        margin:0px auto auto auto;
+        width: 70%;
+        margin: 0px auto auto auto;
     }
 
 }
