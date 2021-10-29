@@ -1,9 +1,5 @@
 baseURL = "https://z217.github.com"
-<<<<<<< HEAD
-copyright = "Copyright © 2020–2020, z217 and the Hugo Authors; all rights reserved."
-=======
 copyright = "Copyright © 2020–2021, z217 and the Hugo Authors; all rights reserved."
->>>>>>> modify js
 languageCode = "zh-CN"
 pygmentsUseClasses = true
 theme = "npq-hugo"
