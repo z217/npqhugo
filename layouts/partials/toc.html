@@ -1,13 +1,15 @@
+<script src={{ "js/toc.js" | absURL }}></script>
 {{ if (.Params.toc | default true ) }}
-<a href="javascript:void(0)" id="tocbtn"><i class="fas fa-bars fa-lg"></i></a>
+<a href="javascript:void(0);" id="tocbtn"><i class="fas fa-bars fa-lg"></i></a>
 <div id="sidetoc">
     <header>
         <h4>{{.Title}}</h4>
     </header>
-    <!-- {{ .TableOfContents }} -->
     <nav id="TableOfContents">
         <ul></ul>
     </nav>
 </div>
-<script src={{ "js/toc.js" | absURL }}></script>
+<script>
+    tocFlag = true;
+</script>
 {{ end }}

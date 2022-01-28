@@ -8,7 +8,7 @@
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{range first (default  4 .Site.Params.recentMax) (where $pages "Section" "ne" .Site.Params.microBlogSection)}}
     <div class="list-item">
-        <a class="entry-title" href="{{ .URL }}">{{ .Title }}</a>
+        <a class="entry-title" href="{{ .Permalink }}">{{ .Title }}</a>
         {{$page := .}}
         {{with .Description}}
         <p>{{.}}</p>
@@ -35,12 +35,14 @@
         {{ range where (where site.RegularPages "Type" "in" site.Params.microBlogSection) "Params.pinned" true }}
         <div class="post">
             <div class="meta pinned"> <i class="fas fa-thumbtack"></i> pinned </div>
-            <a class="entry-title" href="{{ .URL }}">{{ .Title }}</a>
+            <a class="entry-title" href="{{ .Permalink }}">{{ .Title }}</a>
             <div class="post-content">
                 {{.Content}}
             </div>
-            <div class="meta post-footer"> <span>{{.Date.Format "2006 Jan 2 15:04"}}</span> <a href="{{.URL}}"><i
-                        class="fas fa-link"></i> link</a></div>
+            <div class="meta post-footer">
+                <span>{{.Date.Format "2006 Jan 2 15:04"}}</span>
+                <a href="{{ .Permalink }}"><i class="fas fa-link"></i>link</a>
+            </div>
         </div>
         {{ end }}
         {{ range first (default 4 .Site.Params.microMax) (where (where site.RegularPages "Type" "in" site.Params.microBlogSection) "Params.pinned" "ne" true)}}
@@ -48,14 +50,14 @@
             {{if ne .Params.pinned nil}}
             <div class="meta pinned"> <i class="fas fa-thumbtack"></i> pinned </div>
             {{end}}
-            <center>
-                <h1><a href="{{ .URL }}">{{ .Title }}</a></h1>
-            </center>
+            <h1 style="text-align: center;"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
             <div class="post-content">
                 {{.Content}}
             </div>
-            <div class="meta post-footer"> <span>{{.Date.Format "2006 Jan 2 15:04"}}</span> <a href="{{.URL}}"><i
-                        class="fas fa-link"></i> link</a></div>
+            <div class="meta post-footer"> 
+                <span>{{.Date.Format "2006 Jan 2 15:04"}}</span> 
+                <a href="{{ .Permalink }}"><i class="fas fa-link"></i> link</a>
+            </div>
         </div>
         {{ end }}
     </div>

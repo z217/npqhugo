@@ -1,5 +1,5 @@
 let toc;
-let tocFlag = true;
+let tocFlag = false;
 
 function tocInit() {
     let ul = $('#TableOfContents > ul');
@@ -22,7 +22,6 @@ function tocInit() {
             } while (curLevel > level);
         }
         let li = $('<li id="toc-li"><a href="#' + $(headers[i]).attr('id') + '">' + $(headers[i]).text() + '</a></li>');
-        // ul.append('<li id="toc-li"><a href="#' + $(headers[i]).attr('id') + '">' + $(headers[i]).text() + '</a></li>');
         ul.append(li)
         tocLiMap.set($(headers[i]).text(), li)
     }
