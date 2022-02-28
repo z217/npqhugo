@@ -106,7 +106,7 @@ function tocInit() {
         }
 
         let li = $('<li></li>');
-        li.attr('id', 'toc-li');
+        li.attr('class', 'toc-li');
         ul.append(li);
 
         let a = $('<a></a>');

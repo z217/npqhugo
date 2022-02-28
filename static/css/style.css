@@ -137,7 +137,13 @@ aside nav a:hover {
     top: 130px;
     width: 210px;
     bottom: 150px;
-    overflow: scroll;
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+#sidetoc::-webkit-scrollbar-thumb {
+    border-radius: 8px;
 }
 
 #sidetoc header {
@@ -246,6 +252,18 @@ button {
     width: 90%;
     margin: 0px auto auto auto;
     word-break: break-word;
+}
+
+.div-table {
+    overflow: auto;
+}
+
+.div-table::-webkit-scrollbar-thumb {
+    background-color: #575757;
+}
+
+.fl-scrolls::-webkit-scrollbar-thumb {
+    background-color: #575757;
 }
 
 table {
@@ -492,4 +510,13 @@ footer {
         margin: 0px auto auto auto;
     }
 
+}
+
+/* mathjax */
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
 }

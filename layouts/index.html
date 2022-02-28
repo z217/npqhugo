@@ -52,10 +52,12 @@
             {{end}}
             <h1 style="text-align: center;"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
             <div class="post-content">
-                {{.Content}}
+                {{ $content := replace .Content "<table>" "<div class=\"div-table\" data-fl-scrolls><table>" }}
+                {{ $content = replace $content "</table>" "</table></div>" }}
+                {{ $content | safeHTML }}
             </div>
-            <div class="meta post-footer"> 
-                <span>{{.Date.Format "2006 Jan 2 15:04"}}</span> 
+            <div class="meta post-footer">
+                <span>{{.Date.Format "2006 Jan 2 15:04"}}</span>
                 <a href="{{ .Permalink }}"><i class="fas fa-link"></i> link</a>
             </div>
         </div>

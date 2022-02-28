@@ -1,7 +1,7 @@
 baseURL = "https://www.example.com"
 languageCode = "en-us"
 title = "title"
-copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
+copyright = "Copyright © 2008-2019, Steve Francia and the Hugo Authors; all rights reserved."
 theme = "npq-hugo"
 pygmentsUseClasses=true
 
