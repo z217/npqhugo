@@ -422,6 +422,24 @@ footer {
     justify-content: space-between;
 }
 
+.footer-github {
+    white-space: nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footer-mail {
+    white-space: nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.footer-phone {
+    white-space: nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -497,7 +515,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 440px) {
     .contact-info {
         flex-direction: column;
         align-items: center;

@@ -1,11 +1,9 @@
-# baseURL = "https://z217.github.com"
-# copyright = "Copyright © 2020-2022, z217 and the Hugo authors, all rights reserved."
-# languageCode = "zh-CN"
-# pygmentsUseClasses = true
-# theme = "npq-hugo"
-# title = "z217's blog"
-
-# configure the above on your root config.toml
+baseURL = "https://z217.github.com"
+copyright = "Copyright © 2020-2022, z217 and the Hugo authors, all rights reserved."
+languageCode = "zh-CN"
+pygmentsUseClasses = true
+theme = "npq-hugo"
+title = "z217's blog"
 
 [params]
 author = "z217"
