@@ -1,5 +1,11 @@
 let isTocOpen = false;
 let toc;
+let normalAnchorStyle = {
+    "color": "rgba(238, 238, 238, 0.664)"
+};
+let currentAnchorStyle = {
+    "color": "white"
+};
 
 function TocElement(li, a, header) {
     this.li = li;
@@ -16,6 +22,7 @@ TocElement.prototype = {
 }
 
 function tocInit() {
+    if (!isTocOpen) return;
     toc = {
         'isAnchorClicked': false,
         'sideToc': $('#sidetoc'),
@@ -61,8 +68,8 @@ function tocInit() {
                 }
             }
 
-            toc.elements[oldAnchorIdx].a.css('color', 'rgba(238, 238, 238, 0.664)');
-            toc.elements[toc.curAnchorIdx].a.css('color', 'white');
+            toc.elements[oldAnchorIdx].a.css(normalAnchorStyle);
+            toc.elements[toc.curAnchorIdx].a.css(currentAnchorStyle);
 
             // plus 1 to prevent float number round down
             let liTop = toc.elements[toc.curAnchorIdx].li.offset().top + 1;
@@ -78,7 +85,7 @@ function tocInit() {
                 toc.elements.forEach((e) => e.updateHeaderOffsetTop(e));
                 toc.setUpdateHeaderOffsetTopTimer();
             }, 800);
-        }
+        },
     }
 
     let ul = $('#TableOfContents > ul');
@@ -128,10 +135,10 @@ function tocInit() {
     toc.elements.forEach((e) => {
         if (e.a === undefined) return;
         e.a.hover(
-            () => e.a.css('color', 'white'),
+            () => e.a.css(currentAnchorStyle),
             () => {
-                e.a.css('color', 'rgba(238, 238, 238, 0.664)');
-                toc.elements[toc.curAnchorIdx].a.css('color', 'white');
+                e.a.css(normalAnchorStyle);
+                toc.elements[toc.curAnchorIdx].a.css(currentAnchorStyle);
             });
     });
     toc.elements.forEach((e) => {
@@ -166,4 +173,13 @@ function tocInit() {
         toc.setUpdateHeaderOffsetTopTimer();
         if (document.body.clientWidth <= 1400 && toc.isOpen()) toc.close();
     })
+}
+
+function tocSetStyle() {
+    if (!isTocOpen) return;
+    toc.elements.forEach((e) => {
+        if (e.a === undefined) return;
+        e.a.css(normalAnchorStyle);
+    });
+    toc.elements[toc.curAnchorIdx].a.css(currentAnchorStyle)
 }

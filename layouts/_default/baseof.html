@@ -2,11 +2,15 @@
 <html lang="zh-CN">
 {{- partial "head.html" . -}}
 <script src={{ "js/navbutton.js" | absURL }}></script>
+<script src={{ "js/lightswitcher.js" | absURL }}></script>
+<script src={{ "js/toc.js" | absURL }}></script>
 
-<body>
+<body class="dark">
     {{- partial "aside.html" . -}}
     <main id="main">
-        <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+        <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a><br/>
+        <a href="javascript:void(0)" id="scroll-top" onclick="scrollToTop()">回到顶部</a>
+        <a href="javascript:void(0)" id="light-switcher">暗色模式</a>
         <div class="content">
             {{- block "main" . }}{{- end }}
         </div>

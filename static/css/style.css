@@ -2,16 +2,28 @@
     scrollbar-color: #2a2c2e #1c1e1f;
 }
 
-::-webkit-scrollbar {
+.dark::-webkit-scrollbar {
     background-color: #1C1E1F;
 }
 
-::-webkit-scrollbar-thumb {
+.dark::-webkit-scrollbar-thumb {
     background-color: #2A2C2E;
 }
 
-::-webkit-scrollbar-corner {
+.dark::-webkit-scrollbar-corner {
     background-color: rgb(24, 24, 24);
+}
+
+.light::-webkit-scrollbar {
+    background-color: #E3E3E3;
+}
+
+.light::-webkit-scrollbar-thumb {
+    background-color: rgba(22, 22, 22, 0.555);
+}
+
+.light::-webkit-scrollbar-corner {
+    background-color: rgb(208, 208, 208);
 }
 
 html,
@@ -126,6 +138,34 @@ aside nav a:hover {
     padding: 10px;
     color: rgba(238, 238, 238, 0.664);
     background-color: rgba(61, 61, 61, 0.555);
+}
+
+#scroll-top {
+    transition: 0.3s;
+    border-radius: 7px;
+    position: fixed;
+    left: 200px;
+    top: 50px;
+    padding: 10px 5px;
+    font-size: 18px;
+    color: rgba(238, 238, 238, 0.664);
+    background-color: rgba(61, 61, 61, 0.555);
+    writing-mode: vertical-lr;
+    text-decoration: none;
+}
+
+#light-switcher {
+    transition: 0.3s;
+    border-radius: 7px;
+    position: fixed;
+    left: 200px;
+    top: 145px;
+    padding: 10px 5px;
+    font-size: 18px;
+    color: rgba(238, 238, 238, 0.664);
+    background-color: rgba(61, 61, 61, 0.555);
+    writing-mode: vertical-lr;
+    text-decoration: none;
 }
 
 #sidetoc {
@@ -492,6 +532,14 @@ footer {
     }
 
     #closebtn {
+        left: 0px;
+    }
+
+    #scroll-top {
+        left: 0px;
+    }
+
+    #light-switcher {
         left: 0px;
     }
 
