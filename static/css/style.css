@@ -33,8 +33,16 @@ body {
     line-height: 1.6;
     height: 100%;
     margin: 0px;
+}
+
+html.dark, body.dark {
     background-color: #1A1C1D;
     color: #D8D6D0;
+}
+
+html.light, body.light {
+    background-color: #F2F2F2;
+    color: #161209
 }
 
 a {
@@ -47,7 +55,6 @@ a:hover {
 }
 
 aside {
-    background-color: rgb(45, 49, 51);
     height: 100%;
     width: 200px;
     z-index: 1;
@@ -58,13 +65,26 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid #3D3D3D;
     transition: 0.3s;
     /* 0.5 second transition effect to slide in the sidenav */
 }
 
-aside a {
-    color: rgb(238, 238, 238);
+aside.dark {
+    background-color: #2D3133;
+    border-right: 1px solid #3D3D3D;
+}
+
+aside.light {
+    background-color: #EEEEEE;
+    border-right: 1px solid #A3A3A3;
+}
+
+aside a.dark {
+    color: #EEEEEE;
+}
+
+aside a.light {
+    color: #2D3133;
 }
 
 aside i[class^="fa"] {
@@ -72,13 +92,21 @@ aside i[class^="fa"] {
 }
 
 aside header {
-    background-color: #23282E;
     text-align: center;
     display: flex;
     align-items: center;
     width: 100%;
     flex-direction: column;
+}
+
+aside header.dark {
+    background-color: #23282E;
     border-bottom: 1px solid #3D3D3D;
+}
+
+aside header.light {
+    background-color: #E4E4E4;
+    border-bottom: 1px solid #A3A3A3;
 }
 
 aside header img {
@@ -122,7 +150,14 @@ aside nav a:hover {
     font-size: 32px;
     margin-top: 10px;
     margin-bottom: 20px;
-    color: rgb(188, 188, 196);
+}
+
+#branding.dark {
+    color: #BCBCC4;
+}
+
+#branding.light {
+    color: #2D3133
 }
 
 #npq {
@@ -136,8 +171,16 @@ aside nav a:hover {
     left: 200px;
     top: 0px;
     padding: 10px;
+}
+
+#closebtn.dark {
     color: rgba(238, 238, 238, 0.664);
     background-color: rgba(61, 61, 61, 0.555);
+}
+
+#closebtn.light {
+    color: rgba(22, 22, 22, 0.664);
+    background-color: rgba(208, 208, 208, 0.555);
 }
 
 #scroll-top {
@@ -148,10 +191,18 @@ aside nav a:hover {
     top: 50px;
     padding: 10px 5px;
     font-size: 18px;
-    color: rgba(238, 238, 238, 0.664);
-    background-color: rgba(61, 61, 61, 0.555);
     writing-mode: vertical-lr;
     text-decoration: none;
+}
+
+#scroll-top.dark {
+    color: rgba(238, 238, 238, 0.664);
+    background-color: rgba(61, 61, 61, 0.555);
+}
+
+#scroll-top.light {
+    color: rgba(22, 22, 22, 0.664);
+    background-color: rgba(208, 208, 208, 0.555);
 }
 
 #light-switcher {
@@ -162,10 +213,18 @@ aside nav a:hover {
     top: 145px;
     padding: 10px 5px;
     font-size: 18px;
-    color: rgba(238, 238, 238, 0.664);
-    background-color: rgba(61, 61, 61, 0.555);
     writing-mode: vertical-lr;
     text-decoration: none;
+}
+
+#light-switcher.dark {
+    color: rgba(238, 238, 238, 0.664);
+    background-color: rgba(61, 61, 61, 0.555);
+}
+
+#light-switcher.light {
+    color: rgba(22, 22, 22, 0.664);
+    background-color: rgba(208, 208, 208, 0.555);
 }
 
 #sidetoc {
@@ -207,8 +266,12 @@ aside nav a:hover {
     padding: 0px;
 }
 
-#sidetoc li a {
+#sidetoc li a.dark {
     color: rgba(238, 238, 238, 0.664);
+}
+
+#sidetoc li a.light {
+    color: rgba(22, 22, 22, 0.664);
 }
 
 #sidetoc li a:hover {
@@ -226,8 +289,16 @@ aside nav a:hover {
     right: 100px;
     top: 100px;
     padding: 0px 8px 0px 8px;
+}
+
+#tocbtn.dark {
     color: rgba(238, 238, 238, 0.664);
     background-color: rgba(61, 61, 61, 0.555);
+}
+
+#tocbtn.light {
+    color: rgba(22, 22, 22, 0.664);
+    background-color: rgba(208, 208, 208, 0.555);
 }
 
 .toc-highlight {
@@ -235,10 +306,18 @@ aside nav a:hover {
 }
 
 .list-item {
-    border: 1px solid #3D3D3D;
     border-radius: 3px;
     padding: 10px;
+}
+
+.list-item.dark {
+    border: 1px solid #3D3D3D;
     background-color: rgb(39, 41, 43);
+}
+
+.list-item.light {
+    border: 1px solid #A3A3A3;
+    background-color: #E4E4E4;
 }
 
 .list-item+.list-item {
@@ -255,8 +334,15 @@ aside nav a:hover {
 }
 
 .meta {
-    color: rgb(156, 151, 143);
     font-size: small;
+}
+
+.meta.dark {
+    color: #9C978E;
+}
+
+.meta.light {
+    color: #645F56;
 }
 
 main {
@@ -329,10 +415,14 @@ tr:nth-child(even) {
     background-color: rgb(70, 69, 69);
 }
 
-h1,
-h2,
-h3 {
+h1.dark,
+h2.dark,
+h3.dark {
     border-bottom: 1px solid #3D3D3D;
+}
+
+h1.light, h2.light, h3.light {
+    border-bottom: 1px solid #A3A3A3;
 }
 
 #title {
@@ -353,6 +443,24 @@ pre {
     padding: 5px;
 }
 
+pre.dark {
+    background-color: #202020;
+    color: #2E3133;
+}
+
+pre.dark > code {
+    color: #B6B6B6;
+}
+
+pre.light {
+    background-color: #E4E4E4;
+    color: #EEEEEE;
+}
+
+pre.light > code {
+    color: #4E4E4E;
+}
+
 img {
     max-width: 100%;
 }
@@ -366,8 +474,12 @@ blockquote {
     color: #EAD94C;
 }
 
-.posts {
+.posts.dark {
     border: 1px solid #3D3D3D;
+}
+
+.posts.light {
+    border: 1px solid #A3A3A3;
 }
 
 .post {
@@ -438,8 +550,16 @@ ul.pagination {
 footer {
     padding: 30px;
     margin-top: 40px;
+}
+
+footer.dark {
     border-top: 1px solid #3D3D3D;
-    background-color: rgb(30, 34, 39);
+    background-color: #1E2227;
+}
+
+footer.light {
+    border-top: 1px solid #A3A3A3;
+    background-color: #EDEDED;
 }
 
 .footer-content {

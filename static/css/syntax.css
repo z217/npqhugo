@@ -1,7 +1,12 @@
 /* Background */
-.chroma {
+.chroma.dark {
   color: #8a8a8a;
-  background-color: #1c1c1c
+  background-color: #202020;
+}
+
+.chroma.light {
+  color: #161616;
+  background-color: #E3E3E3;
 }
 
 /* Other */
