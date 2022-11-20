@@ -396,10 +396,16 @@ table {
     border-collapse: collapse;
 }
 
-table,
-th,
-td {
-    border: 1px solid rgb(97, 96, 96);
+table.dark,
+th.dark,
+td.dark {
+    border: 1px solid #616060;
+}
+
+table.light,
+th.light,
+td.light {
+    border: 1px solid #6C6C6C;
 }
 
 th,
@@ -407,12 +413,20 @@ td {
     padding: 5px 10px;
 }
 
-th {
-    background-color: rgb(48, 75, 102);
+th.dark {
+    background-color: #304B66;
 }
 
-tr:nth-child(even) {
-    background-color: rgb(70, 69, 69);
+th.light {
+    background-color: #A7A7A7;
+}
+
+tr:nth-child(even).dark {
+    background-color: #464545;
+}
+
+tr:nth-child(even).light {
+    background-color: #DDDDDD;
 }
 
 h1.dark,

@@ -1,9 +1,10 @@
 let light_switcher;
 let is_light_mode = false;
+let fl_scroll_timer;
 const dye_tags = [
   "html, body", "h1, h2, h3", ".chroma", "#branding", "aside", "aside a", "aside header",
-  "#closebtn", "#scroll-top", "#light-switcher", "#tocbtn", "#sidetoc li a", "footer",
-  ".list-item", ".meta", ".posts", "pre",
+  "#closebtn", "#scroll-top", "#light-switcher", "#tocbtn", "#sidetoc", "#sidetoc li a",
+  "footer", ".list-item", ".meta", ".posts", "pre", ".div-table", "table", "th", "td", "tr",
 ];
 
 function InitLightSwitcher() {
@@ -45,6 +46,20 @@ function InitLightSwitcher() {
     });
   }
   dye_tags.forEach(element => $(element).addClass(klass));
+
+  let fl_scroll_set_mode_func = () => {
+    fl_scroll_timer = setTimeout(
+      () => {
+        let table = $('.div-table');
+        if (table.length === 0) return;
+        light_switcher.is_light_mode ?
+          $('.fl-scrolls').addClass("light") :
+          $('.fl-scrolls').addClass("dark");
+        fl_scroll_set_mode_func();
+      }, 500
+    );
+  }
+  fl_scroll_set_mode_func();
 }
 
 function LightSwitcherToggle() {
