@@ -1,5 +1,9 @@
-* {
-    scrollbar-color: #2a2c2e #1c1e1f;
+.dark {
+    scrollbar-color: #2A2C2E #1C1E1F;
+}
+
+.light {
+    scrollbar-color: #E3E3E3 rgba(22, 22, 22, 0.555);
 }
 
 .dark::-webkit-scrollbar {
